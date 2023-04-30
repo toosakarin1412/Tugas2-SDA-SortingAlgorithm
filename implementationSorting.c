@@ -1,4 +1,66 @@
 #include "sortingAlgorithm.h"
+#define MAX_LINE 128
+
+int *readFile(char *fileName){
+    int *arr;
+    int dataCount = countData(fileName);
+    arr = (int*) malloc(dataCount * sizeof(int));
+
+    char line[MAX_LINE];
+
+    FILE *fp;
+    fp = fopen(fileName, "r");
+
+    int counter = 0;
+
+    while (fgets(line, MAX_LINE, fp) != NULL) {
+        int num = atoi(line);
+
+        arr[counter] = num;
+        counter++;
+    }
+
+    return arr;
+};
+
+void makeOutput(int arr[], int size, char* fileName){
+    FILE *fp;
+    fp = fopen(fileName, "w");
+
+    if (fp == NULL) {
+        printf("Error opening file!");
+        return;
+    }
+
+    for (int i = 0; i < size; i++) {
+        fprintf(fp, "%d\n", arr[i]);
+    }
+
+    fclose(fp);
+};
+
+int countData(char* fileName) {
+    int lineCount = 0;
+
+    FILE *fp;
+    fp = fopen(fileName, "r");
+
+    if (fp == NULL) {
+        printf("Error opening file!");
+        return -1;
+    }
+
+    char ch;
+    while ((ch = fgetc(fp)) != EOF) {
+        if (ch == '\n') {
+            lineCount++;
+        }
+    }
+
+    fclose(fp);
+
+    return lineCount;
+}
 
 void swap(int* xp, int* yp)
 {

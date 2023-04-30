@@ -8,7 +8,7 @@ helpFunction()
     echo -e "\t-g\t generate random number"
     echo -e "\t-r\t run sorting algorithm"
     echo -e "\t[SORTING_ALGORITHM]"
-    echo -e "\t buble\t\t sort using bublesort"
+    echo -e "\t bubble\t\t sort using bublesort"
     echo -e "\t selection\t sort using selection"
     echo -e "\t insertion\t sort using insertion"
     echo -e "\t merge\t\t sort using merge"

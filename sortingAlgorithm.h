@@ -25,8 +25,8 @@ void makeOutput(int[], int, char*);
 int countData(char*);
 
 /**
- * Sortfile with bublesort algorithm
+ * Sortfile with bubblesort algorithm
  * @param   *ptr    Pointer integer to array has been sorted
  * @param   length  Array length
 */
-void bubleSort(int*, int);
+void bubbleSort(int*, int);
