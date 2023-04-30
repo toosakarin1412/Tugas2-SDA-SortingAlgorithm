@@ -11,11 +11,7 @@ void generateRandomNumber(int limit){
     fptr = fopen(namafile, "w");
 
     for(int i = 1;i <= limit;i++){
-        if(i == limit){
-            fprintf(fptr, "%d", rand());
-        }else{
-            fprintf(fptr, "%d\n", rand());
-        }
+        fprintf(fptr, "%d\n", rand());
     }
 
     fclose(fptr);
@@ -23,14 +19,40 @@ void generateRandomNumber(int limit){
 
 int main()
 {   
+    printf("Generating 10000 data...\n");
     generateRandomNumber(10000);
+    printf("Complete...\n");
+
+    printf("Generating 50000 data...\n");
     generateRandomNumber(50000);
+    printf("Complete...\n");
+
+    printf("Generating 100000 data...\n");
     generateRandomNumber(100000);
-    generateRandomNumber(50000);
+    printf("Complete...\n");
+
+    printf("Generating 500000 data...\n");
+    generateRandomNumber(500000);
+    printf("Complete...\n");
+
+    printf("Generating 1000000 data...\n");
     generateRandomNumber(1000000);
+    printf("Complete...\n");
+
+    printf("Generating 5000000 data...\n");
     generateRandomNumber(5000000);
+    printf("Complete...\n");
+
+    printf("Generating 10000000 data...\n");
     generateRandomNumber(10000000);
+    printf("Complete...\n");
+
+    printf("Generating 50000000 data...\n");
     generateRandomNumber(50000000);
+    printf("Complete...\n");
+
+    printf("Generating 100000000 data...\n");
     generateRandomNumber(100000000);
+    printf("Complete...\n");
     return 0;
 }
