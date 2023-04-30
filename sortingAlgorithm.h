@@ -16,7 +16,7 @@ int *readFile(char*);
  * @param   *ptr    Pointer integer to array has been sorted
  * @param   int  Array length
 */
-void makeOutput(int[], int, char*);
+void makeOutput(int*, int, char*);
 
 /**
  * Count Data in a file
@@ -37,4 +37,11 @@ void bubbleSort(int*, int);
  * @param   int    Pointer integer to array has been sorted
  * @param   int    Array length
 */
-void selectionSort(int[], int);
+void selectionSort(int*, int);
+
+/**
+ * Sortfile with insertion sort algorithm
+ * @param   int    Pointer integer to array has been sorted
+ * @param   int    Array length
+*/
+void insertionSort(int*, int);

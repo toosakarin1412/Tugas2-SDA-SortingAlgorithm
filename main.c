@@ -25,7 +25,7 @@ int main(int args, char *argv[]){
     }else if(strcmp(argv[1],"selection") == 0){
         selectionSort(data, dataCount);
     }else if(strcmp(argv[1],"insertion") == 0){
-        // To Do
+        insertionSort(data, dataCount);
     }else if(strcmp(argv[1],"merge") == 0){
         // To Do
     }else if(strcmp(argv[1],"quick") == 0){
