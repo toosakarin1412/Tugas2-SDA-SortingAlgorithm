@@ -17,6 +17,9 @@ int main(int args, char *argv[]){
     int *data = readFile(inputFile);
     int dataCount = countData(inputFile);
 
+    clock_t start, end;
+
+    start = clock();
     if(strcmp(argv[1],"bubble") == 0){
         bubbleSort(data, dataCount);
     }else if(strcmp(argv[1],"selection") == 0){
@@ -32,6 +35,10 @@ int main(int args, char *argv[]){
     }else if(strcmp(argv[1],"heap") == 0){
         // To Do
     }
+    end = clock();
+
+    double time_taken = (double)(end - start) / (double)(CLOCKS_PER_SEC);
+    printf("Time execution : %f detik\n", time_taken);
 
     makeOutput(data, dataCount, outputFile);
 }
