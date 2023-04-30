@@ -23,7 +23,7 @@ int main(int args, char *argv[]){
     if(strcmp(argv[1],"bubble") == 0){
         bubbleSort(data, dataCount);
     }else if(strcmp(argv[1],"selection") == 0){
-        // To Do 
+        selectionSort(data, dataCount);
     }else if(strcmp(argv[1],"insertion") == 0){
         // To Do
     }else if(strcmp(argv[1],"merge") == 0){

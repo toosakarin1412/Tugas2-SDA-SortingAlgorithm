@@ -20,14 +20,21 @@ void makeOutput(int[], int, char*);
 
 /**
  * Count Data in a file
- * @param   *ptr    Char pointer to file name
+ * @param   char*ptr    Char pointer to file name
  * @return  
 */
 int countData(char*);
 
 /**
  * Sortfile with bubblesort algorithm
- * @param   *ptr    Pointer integer to array has been sorted
- * @param   length  Array length
+ * @param   int*ptr    Pointer integer to array has been sorted
+ * @param   int     Array length
 */
 void bubbleSort(int*, int);
+
+/**
+ * Sortfile with selection sort algorithm
+ * @param   int    Pointer integer to array has been sorted
+ * @param   int    Array length
+*/
+void selectionSort(int[], int);
