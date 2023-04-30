@@ -8,12 +8,17 @@ int main(int args, char *argv[]){
         return EXIT_SUCCESS;
     }
 
-    printf("%d", countData(argv[2]));
-    // int *data = readFile(argv[2]);
+    char inputFile[64] = "input/";
+    char outputFile[64] = "output/";
 
-    if(strcmp(argv[1],"buble") == 0){
-        // bubleSort(data, 10000);
-        printf("Ini Bubblesort");
+    strcat(inputFile, argv[2]);
+    strcat(outputFile, argv[2]);
+
+    int *data = readFile(inputFile);
+    int dataCount = countData(inputFile);
+
+    if(strcmp(argv[1],"bubble") == 0){
+        bubbleSort(data, dataCount);
     }else if(strcmp(argv[1],"selection") == 0){
         // To Do 
     }else if(strcmp(argv[1],"insertion") == 0){
@@ -28,6 +33,5 @@ int main(int args, char *argv[]){
         // To Do
     }
 
-    // char *fileOutput = strcat("output_", argv[2]);
-    // makeOutput(data, 10000, fileOutput);
+    makeOutput(data, dataCount, outputFile);
 }
