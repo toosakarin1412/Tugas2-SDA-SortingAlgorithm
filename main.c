@@ -31,7 +31,7 @@ int main(int args, char *argv[]){
     }else if(strcmp(argv[1],"quick") == 0){
         quickSort(data, 0, dataCount-1);
     }else if(strcmp(argv[1],"shell") == 0){
-        // To Do
+        shellSort(data, dataCount);
     }else if(strcmp(argv[1],"heap") == 0){
         heapSort(data, dataCount);
     }
@@ -40,5 +40,7 @@ int main(int args, char *argv[]){
     double time_taken = (double)(end - start) / (double)(CLOCKS_PER_SEC);
     printf("Time execution : %f detik\n", time_taken);
 
+    printf("Generating output file...\n");
     makeOutput(data, dataCount, outputFile);
+    printf("Generating output file complete\n");
 }

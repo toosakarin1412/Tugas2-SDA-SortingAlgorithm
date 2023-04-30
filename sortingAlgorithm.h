@@ -62,4 +62,9 @@ void quickSort(int*, int, int);
 /**
  * 
 */
+void shellSort(int*, int);
+
+/**
+ * 
+*/
 void heapSort(int*, int);
