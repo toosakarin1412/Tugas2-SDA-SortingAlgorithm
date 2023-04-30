@@ -33,7 +33,7 @@ int main(int args, char *argv[]){
     }else if(strcmp(argv[1],"shell") == 0){
         // To Do
     }else if(strcmp(argv[1],"heap") == 0){
-        // To Do
+        heapSort(data, dataCount);
     }
     end = clock();
 

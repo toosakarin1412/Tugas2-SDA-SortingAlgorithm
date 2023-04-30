@@ -208,10 +208,6 @@ int partition(int arr[], int low, int high)
     return (i + 1);
 }
  
-// The main function that implements QuickSort
-// arr[] --> Array to be sorted,
-// low --> Starting index,
-// high --> Ending index
 void quickSort(int arr[], int low, int high)
 {
     if (low < high) {
@@ -224,5 +220,60 @@ void quickSort(int arr[], int low, int high)
         // partition and after partition
         quickSort(arr, low, pi - 1);
         quickSort(arr, pi + 1, high);
+    }
+}
+
+void heapify(int arr[], int N, int i)
+{
+    // Find largest among root, left child and right child
+ 
+    // Initialize largest as root
+    int largest = i;
+ 
+    // left = 2*i + 1
+    int left = 2 * i + 1;
+ 
+    // right = 2*i + 2
+    int right = 2 * i + 2;
+ 
+    // If left child is larger than root
+    if (left < N && arr[left] > arr[largest])
+ 
+        largest = left;
+ 
+    // If right child is larger than largest
+    // so far
+    if (right < N && arr[right] > arr[largest])
+ 
+        largest = right;
+ 
+    // Swap and continue heapifying if root is not largest
+    // If largest is not root
+    if (largest != i) {
+ 
+        swap(&arr[i], &arr[largest]);
+ 
+        // Recursively heapify the affected
+        // sub-tree
+        heapify(arr, N, largest);
+    }
+}
+
+void heapSort(int arr[], int N)
+{
+ 
+    // Build max heap
+    for (int i = N / 2 - 1; i >= 0; i--)
+ 
+        heapify(arr, N, i);
+ 
+    // Heap sort
+    for (int i = N - 1; i >= 0; i--) {
+ 
+        swap(&arr[0], &arr[i]);
+ 
+        // Heapify root element to get highest element at
+        // root again
+        heapify(arr, i, 0);
     }
 }

@@ -58,3 +58,8 @@ void mergeSort(int*, int, int);
  * 
 */
 void quickSort(int*, int, int);
+
+/**
+ * 
+*/
+void heapSort(int*, int);
