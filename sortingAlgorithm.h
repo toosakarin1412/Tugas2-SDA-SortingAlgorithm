@@ -45,3 +45,11 @@ void selectionSort(int*, int);
  * @param   int    Array length
 */
 void insertionSort(int*, int);
+
+/**
+ * Sortfile with insertion sort algorithm
+ * @param   int    Pointer integer to array has been sorted
+ * @param   int    left
+ * @param   int    right
+*/
+void mergeSort(int*, int, int);

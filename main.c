@@ -27,7 +27,7 @@ int main(int args, char *argv[]){
     }else if(strcmp(argv[1],"insertion") == 0){
         insertionSort(data, dataCount);
     }else if(strcmp(argv[1],"merge") == 0){
-        // To Do
+        mergeSort(data, 0, dataCount-1);
     }else if(strcmp(argv[1],"quick") == 0){
         // To Do
     }else if(strcmp(argv[1],"shell") == 0){
