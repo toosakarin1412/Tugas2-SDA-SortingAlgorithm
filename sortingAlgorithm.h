@@ -53,3 +53,8 @@ void insertionSort(int*, int);
  * @param   int    right
 */
 void mergeSort(int*, int, int);
+
+/**
+ * 
+*/
+void quickSort(int*, int, int);
